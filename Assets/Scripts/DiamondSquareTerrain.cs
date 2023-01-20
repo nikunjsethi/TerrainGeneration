@@ -11,7 +11,7 @@ public class DiamondSquareTerrain : MonoBehaviour
     public Material[] terrainMaterials;
     Vector3[] mVerts;
     int mVertCount;
-    // Start is called before the first frame update
+
     void Start()
     {
         CreateTerrain();
@@ -21,9 +21,8 @@ public class DiamondSquareTerrain : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            mHeight = 5f;
+            mHeight = 10f;
             CreateTerrain();
-            Debug.Log("Terrain done");
         }
     }
 
