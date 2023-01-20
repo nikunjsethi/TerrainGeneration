@@ -8,12 +8,23 @@ public class DiamondSquareTerrain : MonoBehaviour
     public float mSize;
     public float mHeight;
 
+    public Material[] terrainMaterials;
     Vector3[] mVerts;
     int mVertCount;
     // Start is called before the first frame update
     void Start()
     {
         CreateTerrain();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            mHeight = 5f;
+            CreateTerrain();
+            Debug.Log("Terrain done");
+        }
     }
 
     void CreateTerrain()
@@ -28,7 +39,7 @@ public class DiamondSquareTerrain : MonoBehaviour
 
         Mesh mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-
+        GetComponent<MeshRenderer>().material = terrainMaterials[Random.Range(0, terrainMaterials.Length)];
         int triOffset = 0;
 
         for(int i=0;i<=mDivisions;i++)

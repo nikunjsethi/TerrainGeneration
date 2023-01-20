@@ -253,7 +253,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 1952443955}
   - component: {fileID: 1952443954}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,6 +350,11 @@ MonoBehaviour:
   mDivisions: 128
   mSize: 30
   mHeight: 5
+  terrainMaterials:
+  - {fileID: 2100000, guid: eb1ce95326eb4364eb805b6bea7a3209, type: 2}
+  - {fileID: 2100000, guid: 31bb3b8a7c55a9645a53b4c43070d69b, type: 2}
+  - {fileID: 2100000, guid: c3ebb6111d05c2c4889979a3051ed628, type: 2}
+  - {fileID: 2100000, guid: 9dee9e1082274a2438f55d3f50c1bf80, type: 2}
 --- !u!23 &1952443955
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -370,7 +375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7683e021f5ab16049935ddfb987e86c8, type: 2}
+  - {fileID: 2100000, guid: eb1ce95326eb4364eb805b6bea7a3209, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
