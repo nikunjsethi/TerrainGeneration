@@ -12,22 +12,9 @@ public class DiamondSquareTerrain : MonoBehaviour
     Vector3[] mVerts;
     int mVertCount;
 
-    void Start()
+    public void CreateTerrain()
     {
-        CreateTerrain();
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            mHeight = 10f;
-            CreateTerrain();
-        }
-    }
-
-    void CreateTerrain()
-    {
+        mHeight = 10f;
         mVertCount = (mDivisions + 1) * (mDivisions + 1);
         mVerts = new Vector3[mVertCount];
         Vector2[] uvs = new Vector2[mVertCount];
